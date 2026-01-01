@@ -3,9 +3,782 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Welcome to SeedFold and SeedProteo</title>
+    <title>ByteDance Seed - Protein AI</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style-combined-white.css">
 </head>
 <body>
-    <h1>welcome to seedfold</h1>
+    <!-- Top Navigation -->
+    <nav class="top-nav">
+        <div class="nav-container">
+            <a href="#" class="nav-logo">
+                <img src="figures/seed_logo.png" alt="ByteDance Seed" class="logo-image">
+            </a>
+            <div class="project-tabs">
+                <button class="tab-btn active" data-project="seedfold">SeedFold</button>
+                <button class="tab-btn" data-project="seedproteo">SeedProteo</button>
+            </div>
+            <div class="nav-links">
+                <span class="nav-btn try-btn disabled">
+                    <span>Web Server (Coming Soon!)</span>
+                </span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Horizontal Scroll Container -->
+    <div class="projects-wrapper">
+        <div class="projects-container">
+            
+            <!-- ==================== SeedFold Section ==================== -->
+            <section class="project-section" id="seedfold">
+                <!-- Hero -->
+                <div class="hero">
+                    <div class="hero-bg">
+                        <div class="helix helix-1"></div>
+                        <div class="helix helix-2"></div>
+                        <div class="grid-overlay"></div>
+                    </div>
+                    <div class="hero-content">
+                        <!-- <div class="hero-badge">Structure Prediction</div> -->
+                        <h1 class="hero-title">
+                            <span class="title-main">SeedFold</span>
+                            <span class="title-sub">Scaling Biomolecular Structure Prediction</span>
+                        </h1>
+                        <p class="hero-description">
+                            A next-generation folding model that scales up model capacity through 
+                            <strong>width scaling</strong> and <strong>large-scale data distillation</strong>. 
+                            We also provide <strong>SeedFold-Linear</strong>, a more efficient variant with linear triangular attention. 
+                            Both models achieve state-of-the-art results on FoldBench, outperforming AlphaFold3 on most protein-related tasks.
+                        </p>
+                        <div class="hero-stats">
+                            <div class="stat-item">
+                                <span class="stat-value">923M</span>
+                                <span class="stat-label">Parameters</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-value">26.5M</span>
+                                <span class="stat-label">Training Samples</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-value">#1</span>
+                                <span class="stat-label">on FoldBench</span>
+                            </div>
+                        </div>
+                        <div class="hero-actions">
+                            <div class="hero-actions-main">
+                                <a href="#seedfold-results" class="btn btn-primary">View Results</a>
+                                <a href="https://arxiv.org/abs/2512.24354" class="btn btn-secondary" target="_blank">Read Paper</a>
+                                <span class="btn btn-secondary disabled">
+                                    <span>Try SeedFold (Coming Soon!)</span>
+                                </span>
+                            </div>
+                            <div class="hero-actions-social">
+                                <button class="btn-icon" onclick="openWeChatModal('seedfold')" title="Join WeChat Group">
+                                    <svg viewBox="0 0 24 24" fill="currentColor">
+                                        <path d="M8.691 2.188C3.891 2.188 0 5.476 0 9.53c0 2.212 1.17 4.203 3.002 5.55a.59.59 0 0 1 .213.665l-.39 1.48c-.019.07-.048.141-.048.213 0 .163.13.295.29.295a.326.326 0 0 0 .167-.054l1.903-1.114a.864.864 0 0 1 .717-.098 10.16 10.16 0 0 0 2.837.403c.276 0 .543-.027.811-.05-.857-2.578.157-4.972 1.932-6.446 1.703-1.415 3.882-1.98 5.853-1.838-.576-3.583-4.196-6.348-8.596-6.348zM5.785 5.991c.642 0 1.162.529 1.162 1.18a1.17 1.17 0 0 1-1.162 1.178A1.17 1.17 0 0 1 4.623 7.17c0-.651.52-1.18 1.162-1.18zm5.813 0c.642 0 1.162.529 1.162 1.18a1.17 1.17 0 0 1-1.162 1.178 1.17 1.17 0 0 1-1.162-1.178c0-.651.52-1.18 1.162-1.18zm5.34 2.867c-1.797-.052-3.746.512-5.28 1.786-1.72 1.428-2.687 3.72-1.78 6.22.942 2.453 3.666 4.229 6.884 4.229.826 0 1.622-.12 2.361-.336a.722.722 0 0 1 .598.082l1.584.926a.272.272 0 0 0 .14.047c.134 0 .24-.111.24-.247 0-.06-.023-.12-.038-.177l-.327-1.233a.582.582 0 0 1-.023-.156.49.49 0 0 1 .201-.398C23.024 18.48 24 16.82 24 14.98c0-3.21-2.931-5.837-6.656-6.088V8.89c-.135-.01-.27-.027-.407-.03zm-2.53 3.274c.535 0 .969.44.969.982a.976.976 0 0 1-.969.983.976.976 0 0 1-.969-.983c0-.542.434-.982.969-.982zm4.844 0c.535 0 .969.44.969.982a.976.976 0 0 1-.969.983.976.976 0 0 1-.969-.983c0-.542.434-.982.969-.982z"/>
+                                    </svg>
+                                </button>
+                                <a href="https://discord.gg/AcHawczn" class="btn-icon" target="_blank" title="Join Discord Server">
+                                    <svg viewBox="0 0 24 24" fill="currentColor">
+                                        <path d="M20.317 4.37a19.791 19.791 0 0 0-4.885-1.515.074.074 0 0 0-.079.037c-.21.375-.444.864-.608 1.25a18.27 18.27 0 0 0-5.487 0 12.64 12.64 0 0 0-.617-1.25.077.077 0 0 0-.079-.037A19.736 19.736 0 0 0 3.677 4.37a.07.07 0 0 0-.032.027C.533 9.046-.32 13.58.099 18.057a.082.082 0 0 0 .031.057 19.9 19.9 0 0 0 5.993 3.03.078.078 0 0 0 .084-.028c.462-.63.874-1.295 1.226-1.994a.076.076 0 0 0-.041-.106 13.107 13.107 0 0 1-1.872-.892.077.077 0 0 1-.008-.128 10.2 10.2 0 0 0 .372-.292.074.074 0 0 1 .077-.01c3.928 1.793 8.18 1.793 12.062 0a.074.074 0 0 1 .078.01c.12.098.246.198.373.292a.077.077 0 0 1-.006.127 12.299 12.299 0 0 1-1.873.892.077.077 0 0 0-.041.107c.36.698.772 1.362 1.225 1.993a.076.076 0 0 0 .084.028 19.839 19.839 0 0 0 6.002-3.03.077.077 0 0 0 .032-.054c.5-5.177-.838-9.674-3.549-13.66a.061.061 0 0 0-.031-.03zM8.02 15.33c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.956-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.956 2.418-2.157 2.418zm7.975 0c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.955-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.946 2.418-2.157 2.418z"/>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="hero-figure">
+                        <img src="figures/intro.png" alt="SeedFold Overview" class="intro-image">
+                    </div>
+                </div>
+
+                <!-- Key Contributions -->
+                <div class="section contributions">
+                    <div class="container">
+                        <div class="section-header">
+                            <span class="section-tag">Key Innovations</span>
+                            <h2 class="section-title">Three Pillars of Scaling</h2>
+                            <p class="section-desc">We scale folding models from three perspectives to achieve state-of-the-art performance</p>
+                        </div>
+                        <div class="contributions-grid">
+                            <div class="contribution-card" data-index="01">
+                                <div class="card-icon">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <rect x="3" y="3" width="18" height="18" rx="2"/>
+                                        <path d="M3 9h18M9 21V9"/>
+                                    </svg>
+                                </div>
+                                <h3>Model Scaling</h3>
+                                <p>Scale the Pairformer width from 128 to 512, increasing model capacity. Training such wide networks poses significant challenges including memory constraints and training instability—we developed engineering solutions to overcome these obstacles.</p>
+                                <ul class="card-highlights">
+                                    <li>Width scaling > Depth scaling</li>
+                                    <li>128 → 256 → 384 → 512 dimensions</li>
+                                    <li>Solved training stability challenges</li>
+                                </ul>
+                            </div>
+                            <div class="contribution-card" data-index="02">
+                                <div class="card-icon">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/>
+                                    </svg>
+                                </div>
+                                <h3>Linear Triangular Attention</h3>
+                                <p>A novel attention mechanism that reduces computational complexity from O(n³) to O(n²), enabling efficient scaling while maintaining prediction quality.</p>
+                                <ul class="card-highlights">
+                                    <li>Additive & Gated variants</li>
+                                    <li>2-3× memory reduction</li>
+                                    <li>Optimized Triton kernels</li>
+                                </ul>
+                            </div>
+                            <div class="contribution-card" data-index="03">
+                                <div class="card-icon">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <ellipse cx="12" cy="5" rx="9" ry="3"/>
+                                        <path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/>
+                                        <path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/>
+                                    </svg>
+                                </div>
+                                <h3>Large-Scale Distillation</h3>
+                                <p>Construct a 26.5M sample dataset through distillation from AlphaFold2, expanding training data by 147× compared to experimental structures.</p>
+                                <ul class="card-highlights">
+                                    <li>PDB + AFDB + Mgnify</li>
+                                    <li>147× data expansion</li>
+                                    <li>Diverse sequence coverage</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Results -->
+                <div class="section results" id="seedfold-results">
+                    <div class="container">
+                        <div class="section-header">
+                            <span class="section-tag">Benchmark Performance</span>
+                            <h2 class="section-title">State-of-the-Art on FoldBench</h2>
+                            <p class="section-desc">Comprehensive evaluation across diverse biomolecular structure prediction tasks</p>
+                        </div>
+                        <div class="results-table-wrapper">
+                            <table class="results-table">
+                                <thead>
+                                    <tr>
+                                        <th>Model</th>
+                                        <th>Monomer<br><span class="metric">(lDDT)</span></th>
+                                        <th>Prot-Prot<br><span class="metric">(SR%: DockQ ≥ 0.23)</span></th>
+                                        <th>Ab-Ag<br><span class="metric">(SR%: DockQ ≥ 0.23)</span></th>
+                                        <th>Prot-Lig<br><span class="metric">(SR%: lRMSD < 2Å and lDDT-PLI > 0.8)</span></th>
+                                        <th>Prot-RNA<br><span class="metric">(SR%: DockQ ≥ 0.23)</span></th>
+                                        <th>Prot-DNA<br><span class="metric">(SR%: DockQ ≥ 0.23)</span></th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td class="model-name">AlphaFold 3</td>
+                                        <td>0.88</td>
+                                        <td>72.93%</td>
+                                        <td>47.90%</td>
+                                        <td>64.90%</td>
+                                        <td>62.32%</td>
+                                        <td class="best">79.18%</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="model-name">Boltz-1</td>
+                                        <td>0.87</td>
+                                        <td>68.25%</td>
+                                        <td>33.54%</td>
+                                        <td>55.04%</td>
+                                        <td>56.90%</td>
+                                        <td>70.97%</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="model-name">Chai-1</td>
+                                        <td>0.87</td>
+                                        <td>68.53%</td>
+                                        <td>23.64%</td>
+                                        <td>51.23%</td>
+                                        <td>50.91%</td>
+                                        <td>69.97%</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="model-name">Protenix-0.5</td>
+                                        <td>0.8773</td>
+                                        <td>71.50%</td>
+                                        <td>41.00%</td>
+                                        <td>62.30%</td>
+                                        <td>50.70%</td>
+                                        <td>71.38%</td>
+                                    </tr>
+                                    <tr class="highlight-row">
+                                        <td class="model-name ours">SeedFold</td>
+                                        <td class="best">0.8889</td>
+                                        <td class="second">74.03%</td>
+                                        <td class="best">53.21%</td>
+                                        <td class="second">63.12%</td>
+                                        <td class="best">65.31%</td>
+                                        <td>72.60%</td>
+                                    </tr>
+                                    <tr class="highlight-row">
+                                        <td class="model-name ours">SeedFold-Linear</td>
+                                        <td class="second">0.8861</td>
+                                        <td class="best">74.14%</td>
+                                        <td class="second">46.91%</td>
+                                        <td class="best">66.48%</td>
+                                        <td class="second">61.80%</td>
+                                        <td class="second">76.00%</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="performance-highlights">
+                            <div class="highlight-item">
+                                <div class="highlight-icon win">↑</div>
+                                <div class="highlight-content">
+                                    <span class="highlight-value">+5.31%</span>
+                                    <span class="highlight-label">on Ab-Ag vs AlphaFold3</span>
+                                </div>
+                            </div>
+                            <div class="highlight-item">
+                                <div class="highlight-icon win">↑</div>
+                                <div class="highlight-content">
+                                    <span class="highlight-value">+1.58%</span>
+                                    <span class="highlight-label">on Prot-Lig vs AlphaFold3</span>
+                                </div>
+                            </div>
+                            <div class="highlight-item">
+                                <div class="highlight-icon win">↑</div>
+                                <div class="highlight-content">
+                                    <span class="highlight-value">+2.99%</span>
+                                    <span class="highlight-label">on Prot-RNA vs AlphaFold3</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Method -->
+                <div class="section method">
+                    <div class="container">
+                        <div class="section-header">
+                            <span class="section-tag">Technical Details</span>
+                            <h2 class="section-title">Method Overview</h2>
+                        </div>
+
+                        <!-- Architecture Figure -->
+                        <div class="method-architecture">
+                            <div class="arch-figure">
+                                <img src="figures/model_arch_horizon_v2.png" alt="Model Architecture">
+                            </div>
+                            <div class="arch-description">
+                                <h3>Model Architecture</h3>
+                                <p>SeedFold inherits the AlphaFold3 architecture with key modifications for scaling:</p>
+                                <ul>
+                                    <li><strong>MSA Module:</strong> Extracts evolutionary features from multiple sequence alignments</li>
+                                    <li><strong>Pairformer:</strong> Updates pair representations via triangular operations (scaled to 512 width)</li>
+                                    <li><strong>Structure Module:</strong> Diffusion-based all-atom structure generation</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <!-- Scaling Comparison -->
+                        <div class="method-scaling">
+                            <div class="scaling-content">
+                                <h3>Width vs Depth Scaling</h3>
+                                <p>Our experiments demonstrate that width scaling of the Pairformer is the most effective strategy. The pair representation dimension is the critical bottleneck—increasing it directly enhances the model's capacity to encode complex pairwise interactions.</p>
+                                <div class="scaling-stats">
+                                    <div class="scaling-item">
+                                        <span class="scaling-label">Base (128-width)</span>
+                                        <div class="scaling-bar" style="--width: 40%"></div>
+                                        <span class="scaling-value">432M params</span>
+                                    </div>
+                                    <div class="scaling-item">
+                                        <span class="scaling-label">Medium (256-width)</span>
+                                        <div class="scaling-bar" style="--width: 55%"></div>
+                                        <span class="scaling-value">533M params</span>
+                                    </div>
+                                    <div class="scaling-item highlight">
+                                        <span class="scaling-label">Large (512-width)</span>
+                                        <div class="scaling-bar" style="--width: 100%"></div>
+                                        <span class="scaling-value">923M params</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="scaling-figure">
+                                <img src="figures/scale_up_combined.png" alt="Scaling Comparison">
+                            </div>
+                        </div>
+
+                        <!-- Linear Attention -->
+                        <div class="method-attention">
+                            <div class="attention-figure">
+                                <img src="figures/linear_attention.png" alt="Linear Triangular Attention">
+                            </div>
+                            <div class="attention-content">
+                                <h3>Linear Triangular Attention</h3>
+                                <p>We propose two variants of linear triangular attention to replace the computationally expensive vanilla triangular attention:</p>
+                                <div class="attention-variants">
+                                    <div class="variant">
+                                        <h4>Additive Linear TriAtt</h4>
+                                        <code>φ(Q)φ(K)ᵀ + ψ(B)</code>
+                                        <p>Inherits advantages of vanilla attention with well-established linear attention designs</p>
+                                    </div>
+                                    <div class="variant">
+                                        <h4>Gated Linear TriAtt</h4>
+                                        <code>φ(Q)φ(K)ᵀ ⊙ ψ(B)</code>
+                                        <p>Gating mechanism controls information flow; superior on DNA/RNA tasks</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Team -->
+                <div class="section team">
+                    <div class="container">
+                        <div class="section-header">
+                            <span class="section-tag">Our Team</span>
+                            <h2 class="section-title">Contributors</h2>
+                        </div>
+                        <div class="team-grid">
+                            <div class="team-category">
+                                <h3>Project Leads</h3>
+                                <div class="team-members">
+                                    <div class="member">Yi Zhou<sup>*</sup></div>
+                                    <div class="member">Chan Lu<sup>*</sup></div>
+                                </div>
+                                <p class="team-note"><sup>*</sup>Equal contribution. Listing order is random.</p>
+                            </div>
+                            <div class="team-category">
+                                <h3>Contributors</h3>
+                                <div class="team-members">
+                                    <div class="member">Yiming Ma</div>
+                                    <div class="member">Wei Qu</div>
+                                    <div class="member">Fei Ye</div>
+                                    <div class="member">Kexin Zhang</div>
+                                    <div class="member">Lan Wang</div>
+                                    <div class="member">Minrui Gui</div>
+                                </div>
+                            </div>
+                            <div class="team-category">
+                                <h3>Technical Lead</h3>
+                                <div class="team-members">
+                                    <div class="member lead">Quanquan Gu</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="affiliation">
+                            <p>ByteDance Seed</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Citation -->
+                <div class="section citation-section">
+                    <div class="container">
+                        <div class="section-header">
+                            <span class="section-tag">Reference</span>
+                            <h2 class="section-title">Citation</h2>
+                        </div>
+                        <div class="citation-box">
+                            <pre><code>@article{seedfold2025,
+  title={SeedFold: Scaling Biomolecular Structure Prediction},
+  author={Zhou, Yi and Lu, Chan and Ma, Yiming and Qu, Wei and Ye, Fei 
+          and Zhang, Kexin and Wang, Lan and Gui, Minrui and Gu, Quanquan},
+  journal={arXiv preprint},
+  year={2025}
+}</code></pre>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ==================== SeedProteo Section ==================== -->
+            <section class="project-section" id="seedproteo">
+                <!-- Hero -->
+                <div class="hero">
+                    <div class="hero-bg">
+                        <div class="helix helix-1" style="background: #7c3aed;"></div>
+                        <div class="helix helix-2" style="background: #ec4899;"></div>
+                        <div class="grid-overlay"></div>
+                    </div>
+                    <div class="hero-content">
+                        <!-- <div class="hero-badge" style="background: rgba(124, 58, 237, 0.1); color: #7c3aed; border-color: rgba(124, 58, 237, 0.2);">Protein Design</div> -->
+                        <h1 class="hero-title">
+                            <span class="title-main" style="background: linear-gradient(135deg, #7c3aed 0%, #ec4899 100%); -webkit-background-clip: text; background-clip: text;">SeedProteo</span>
+                            <span class="title-sub">Accurate De Novo All-Atom Design of Protein Binders</span>
+                        </h1>
+                        <p class="hero-description">
+                            A diffusion-based model for <strong>de novo all-atom protein design</strong>. 
+                            SeedProteo repurposes cutting-edge folding architecture into a powerful generative framework, 
+                            achieving state-of-the-art performance in both <strong>unconditional generation</strong> and <strong>binder design</strong>.
+                        </p>
+                        <div class="hero-stats">
+                            <div class="stat-item">
+                                <span class="stat-value">All-Atom</span>
+                                <span class="stat-label">Design Level</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-value">Top</span>
+                                <span class="stat-label">In-silico Success Rate</span>
+                            </div>
+                        </div>
+                        <div class="hero-actions">
+                            <div class="hero-actions-main">
+                                <a href="#seedproteo-results" class="btn btn-primary" style="background: #7c3aed;">View Results</a>
+                                <a href="https://arxiv.org/abs/2512.24192" class="btn btn-secondary" target="_blank">Read Paper</a>
+                                <span class="btn btn-secondary disabled">
+                                    <span>Try SeedProteo (Coming Soon!)</span>
+                                </span>
+                            </div>
+                            <div class="hero-actions-social">
+                                <button class="btn-icon" onclick="openWeChatModal('seedproteo')" title="Join WeChat Group">
+                                    <svg viewBox="0 0 24 24" fill="currentColor">
+                                        <path d="M8.691 2.188C3.891 2.188 0 5.476 0 9.53c0 2.212 1.17 4.203 3.002 5.55a.59.59 0 0 1 .213.665l-.39 1.48c-.019.07-.048.141-.048.213 0 .163.13.295.29.295a.326.326 0 0 0 .167-.054l1.903-1.114a.864.864 0 0 1 .717-.098 10.16 10.16 0 0 0 2.837.403c.276 0 .543-.027.811-.05-.857-2.578.157-4.972 1.932-6.446 1.703-1.415 3.882-1.98 5.853-1.838-.576-3.583-4.196-6.348-8.596-6.348zM5.785 5.991c.642 0 1.162.529 1.162 1.18a1.17 1.17 0 0 1-1.162 1.178A1.17 1.17 0 0 1 4.623 7.17c0-.651.52-1.18 1.162-1.18zm5.813 0c.642 0 1.162.529 1.162 1.18a1.17 1.17 0 0 1-1.162 1.178 1.17 1.17 0 0 1-1.162-1.178c0-.651.52-1.18 1.162-1.18zm5.34 2.867c-1.797-.052-3.746.512-5.28 1.786-1.72 1.428-2.687 3.72-1.78 6.22.942 2.453 3.666 4.229 6.884 4.229.826 0 1.622-.12 2.361-.336a.722.722 0 0 1 .598.082l1.584.926a.272.272 0 0 0 .14.047c.134 0 .24-.111.24-.247 0-.06-.023-.12-.038-.177l-.327-1.233a.582.582 0 0 1-.023-.156.49.49 0 0 1 .201-.398C23.024 18.48 24 16.82 24 14.98c0-3.21-2.931-5.837-6.656-6.088V8.89c-.135-.01-.27-.027-.407-.03zm-2.53 3.274c.535 0 .969.44.969.982a.976.976 0 0 1-.969.983.976.976 0 0 1-.969-.983c0-.542.434-.982.969-.982zm4.844 0c.535 0 .969.44.969.982a.976.976 0 0 1-.969.983.976.976 0 0 1-.969-.983c0-.542.434-.982.969-.982z"/>
+                                    </svg>
+                                </button>
+                                <a href="https://discord.gg/AcHawczn" class="btn-icon" target="_blank" title="Join Discord Server">
+                                    <svg viewBox="0 0 24 24" fill="currentColor">
+                                        <path d="M20.317 4.37a19.791 19.791 0 0 0-4.885-1.515.074.074 0 0 0-.079.037c-.21.375-.444.864-.608 1.25a18.27 18.27 0 0 0-5.487 0 12.64 12.64 0 0 0-.617-1.25.077.077 0 0 0-.079-.037A19.736 19.736 0 0 0 3.677 4.37a.07.07 0 0 0-.032.027C.533 9.046-.32 13.58.099 18.057a.082.082 0 0 0 .031.057 19.9 19.9 0 0 0 5.993 3.03.078.078 0 0 0 .084-.028c.462-.63.874-1.295 1.226-1.994a.076.076 0 0 0-.041-.106 13.107 13.107 0 0 1-1.872-.892.077.077 0 0 1-.008-.128 10.2 10.2 0 0 0 .372-.292.074.074 0 0 1 .077-.01c3.928 1.793 8.18 1.793 12.062 0a.074.074 0 0 1 .078.01c.12.098.246.198.373.292a.077.077 0 0 1-.006.127 12.299 12.299 0 0 1-1.873.892.077.077 0 0 0-.041.107c.36.698.772 1.362 1.225 1.993a.076.076 0 0 0 .084.028 19.839 19.839 0 0 0 6.002-3.03.077.077 0 0 0 .032-.054c.5-5.177-.838-9.674-3.549-13.66a.061.061 0 0 0-.031-.03zM8.02 15.33c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.956-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.956 2.418-2.157 2.418zm7.975 0c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.955-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.946 2.418-2.157 2.418z"/>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="hero-figure">
+                        <img src="figures/design_cases.png" alt="SeedProteo Binder Examples" class="intro-image">
+                    </div>
+                </div>
+
+                <!-- Benchmark Section -->
+                <div class="section results" id="seedproteo-results">
+                    <div class="container">
+                        <!-- Binder Design Performance -->
+                        <div class="section-header">
+                            <span class="section-tag" style="background: rgba(124, 58, 237, 0.1); color: #7c3aed;">Benchmark</span>
+                            <h2 class="section-title">Binder Design Performance</h2>
+                            <p class="section-desc">SeedProteo outperforms open-source baselines across 10 benchmark targets</p>
+                        </div>
+                        <div class="result-figure large-figure">
+                            <img src="figures/design_binder_res.png" alt="Binder Design Success Rates">
+                            <p class="figure-caption"><strong>Comparison of binder design success and diversity.</strong> SeedProteo-R (Robust) and SeedProteo-D (Diverse) modes vs. baselines.</p>
+                        </div>
+
+                        <!-- Structural Novelty Table -->
+                        <div class="section-header" style="margin-top: 60px;">
+                            <h2 class="section-title">Structural Novelty in Binder Design</h2>
+                            <p class="section-desc">Lower novelty scores indicate more novel designs. Best performance per target in bold, second best underlined.</p>
+                        </div>
+                        <div class="results-table-wrapper">
+                            <table class="results-table novelty-table">
+                                <thead>
+                                    <tr>
+                                        <th>Method</th>
+                                        <th>TrkA</th>
+                                        <th>PD-L1</th>
+                                        <th>Insulin</th>
+                                        <th>BHRF1</th>
+                                        <th>IL-7RA</th>
+                                        <th>SC2RBD</th>
+                                        <th>VEGF-A</th>
+                                        <th>H1</th>
+                                        <th>IL-17A</th>
+                                        <th>TNFA</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr class="category-row">
+                                        <td colspan="11" style="text-align: left; font-weight: 600; font-style: italic; background: rgba(124, 58, 237, 0.05);">Ours</td>
+                                    </tr>
+                                    <tr class="highlight-row">
+                                        <td class="model-name ours" style="color: #7c3aed;">SeedProteo-D</td>
+                                        <td class="second">0.829</td>
+                                        <td class="best">0.832</td>
+                                        <td class="best">0.837</td>
+                                        <td class="best">0.822</td>
+                                        <td class="best">0.840</td>
+                                        <td class="best">0.819</td>
+                                        <td class="best">0.836</td>
+                                        <td class="best">0.823</td>
+                                        <td class="second">0.806</td>
+                                        <td class="best">0.870</td>
+                                    </tr>
+                                    <tr class="highlight-row">
+                                        <td class="model-name ours" style="color: #7c3aed;">SeedProteo-R</td>
+                                        <td>0.905</td>
+                                        <td>0.913</td>
+                                        <td>0.911</td>
+                                        <td>0.872</td>
+                                        <td>0.917</td>
+                                        <td class="second">0.858</td>
+                                        <td>0.901</td>
+                                        <td>0.890</td>
+                                        <td>0.855</td>
+                                        <td>--</td>
+                                    </tr>
+                                    <tr class="category-row">
+                                        <td colspan="11" style="text-align: left; font-weight: 600; font-style: italic; background: var(--color-bg-light);">Baselines</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="model-name">BindCraft</td>
+                                        <td>0.849</td>
+                                        <td>0.856</td>
+                                        <td class="second">0.864</td>
+                                        <td>0.847</td>
+                                        <td class="second">0.861</td>
+                                        <td>0.863</td>
+                                        <td class="second">0.850</td>
+                                        <td class="second">0.830</td>
+                                        <td>0.818</td>
+                                        <td>--</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="model-name">PXDesign</td>
+                                        <td>0.914</td>
+                                        <td>0.929</td>
+                                        <td>0.928</td>
+                                        <td>0.924</td>
+                                        <td>0.928</td>
+                                        <td>0.917</td>
+                                        <td>0.913</td>
+                                        <td>0.888</td>
+                                        <td>0.906</td>
+                                        <td>--</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="model-name">BoltzGen</td>
+                                        <td>0.908</td>
+                                        <td>0.924</td>
+                                        <td>0.929</td>
+                                        <td>0.928</td>
+                                        <td>0.885</td>
+                                        <td>0.915</td>
+                                        <td>0.902</td>
+                                        <td>0.885</td>
+                                        <td>0.863</td>
+                                        <td>--</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="model-name">RFDiffusion</td>
+                                        <td>0.932</td>
+                                        <td>0.934</td>
+                                        <td>0.927</td>
+                                        <td>0.946</td>
+                                        <td>0.916</td>
+                                        <td>0.912</td>
+                                        <td>0.940</td>
+                                        <td>--</td>
+                                        <td>0.938</td>
+                                        <td>--</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="model-name">RFDiffusion3</td>
+                                        <td class="best">0.808</td>
+                                        <td class="second">0.834</td>
+                                        <td>0.876</td>
+                                        <td class="second">0.845</td>
+                                        <td class="best">0.840</td>
+                                        <td>--</td>
+                                        <td>--</td>
+                                        <td>0.930</td>
+                                        <td class="best">0.800</td>
+                                        <td>--</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Key Contributions -->
+                <div class="section contributions">
+                    <div class="container">
+                        <div class="section-header">
+                            <span class="section-tag" style="background: rgba(124, 58, 237, 0.1); color: #7c3aed;">Key Innovations</span>
+                            <h2 class="section-title">Technical Contributions</h2>
+                        </div>
+                        <div class="contributions-grid">
+                            <div class="contribution-card" data-index="01">
+                                <div class="card-icon" style="background: rgba(124, 58, 237, 0.1);">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="#7c3aed" stroke-width="2">
+                                        <circle cx="12" cy="12" r="10"/>
+                                        <circle cx="12" cy="12" r="4"/>
+                                        <line x1="12" y1="2" x2="12" y2="6"/>
+                                        <line x1="12" y1="18" x2="12" y2="22"/>
+                                        <line x1="2" y1="12" x2="6" y2="12"/>
+                                        <line x1="18" y1="12" x2="22" y2="12"/>
+                                    </svg>
+                                </div>
+                                <h3>All-Atom Modeling</h3>
+                                <p>Directly designs proteins at the all-atom level using the atom14 schema, ensuring physically accurate structures.</p>
+                                <ul class="card-highlights">
+                                    <li>atom14 representation</li>
+                                    <li>Full atomic detail</li>
+                                </ul>
+                            </div>
+                            <div class="contribution-card" data-index="02">
+                                <div class="card-icon" style="background: rgba(124, 58, 237, 0.1);">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="#7c3aed" stroke-width="2">
+                                        <path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"/>
+                                    </svg>
+                                </div>
+                                <h3>Self-Conditioning</h3>
+                                <p>Reuses denoised structures and predicted secondary structures to stabilize the sampling process.</p>
+                                <ul class="card-highlights">
+                                    <li>Design View integration</li>
+                                    <li>Structure feedback</li>
+                                    <li>Stable sampling</li>
+                                </ul>
+                            </div>
+                            <div class="contribution-card" data-index="03">
+                                <div class="card-icon" style="background: rgba(124, 58, 237, 0.1);">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="#7c3aed" stroke-width="2">
+                                        <rect x="3" y="3" width="7" height="7"/>
+                                        <rect x="14" y="3" width="7" height="7"/>
+                                        <rect x="14" y="14" width="7" height="7"/>
+                                        <rect x="3" y="14" width="7" height="7"/>
+                                    </svg>
+                                </div>
+                                <h3>MRF Sequence Decoding</h3>
+                                <p>Uses Markov Random Field for energy minimization in sequence space, ensuring global consistency.</p>
+                                <ul class="card-highlights">
+                                    <li>Energy minimization</li>
+                                    <li>Global consistency</li>
+                                    <li>Optimal sequences</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Methodology -->
+                <div class="section method">
+                    <div class="container">
+                        <div class="section-header">
+                            <span class="section-tag" style="background: rgba(124, 58, 237, 0.1); color: #7c3aed;">Architecture</span>
+                            <h2 class="section-title">Methodology</h2>
+                        </div>
+                        <div class="method-grid">
+                            <div class="method-figure large">
+                                <img src="figures/design_model.png" alt="SeedProteo Architecture">
+                            </div>
+                            <div class="method-content">
+                                <h3>Design View Framework</h3>
+                                <p>SeedProteo mimics the architecture of AlphaFold3 and introduces a novel <strong>Design View</strong> that integrates self-conditioning features to guide the generative process.</p>
+                                <ul>
+                                    <li><strong>Left:</strong> Design View (Generative model)</li>
+                                    <li><strong>Right:</strong> Folding View (Input representation)</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Unconditional Generation -->
+                <div class="section method">
+                    <div class="container">
+                        <div class="section-header">
+                            <span class="section-tag" style="background: rgba(124, 58, 237, 0.1); color: #7c3aed;">Scalability</span>
+                            <h2 class="section-title">Unconditional Generation</h2>
+                            <p class="section-desc">Superior scalability, generating valid structures up to 1000 residues</p>
+                        </div>
+                        <div class="result-figure">
+                            <img src="figures/design_uncond.png" alt="Unconditional Generation Performance">
+                            <p class="figure-caption"><strong>Unconditional monomer benchmark.</strong> Left: Design Success Rate vs Length. Right: Number of Unique Clusters vs Length.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Team -->
+                <div class="section team">
+                    <div class="container">
+                        <div class="section-header">
+                            <span class="section-tag" style="background: rgba(124, 58, 237, 0.1); color: #7c3aed;">Our Team</span>
+                            <h2 class="section-title">Contributors</h2>
+                        </div>
+                        <div class="team-grid">
+                            <div class="team-category">
+                                <h3>Project Lead</h3>
+                                <div class="team-members">
+                                    <div class="member">Wei Qu</div>
+                                </div>
+                            </div>
+                            <div class="team-category">
+                                <h3>Contributors</h3>
+                                <div class="team-members">
+                                    <div class="member">Yiming Ma<sup>†</sup></div>
+                                    <div class="member">Fei Ye</div>
+                                    <div class="member">Chan Lu</div>
+                                    <div class="member">Yi Zhou</div>
+                                    <div class="member">Kexin Zhang<sup>†</sup></div>
+                                    <div class="member">Lan Wang</div>
+                                    <div class="member">Minrui Gui<sup>†</sup></div>
+                                </div>
+                                <p class="team-note"><sup>†</sup>Work done during internship at ByteDance Seed</p>
+                            </div>
+                            <div class="team-category">
+                                <h3>Technical Lead</h3>
+                                <div class="team-members">
+                                    <div class="member lead">Quanquan Gu</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="affiliation">
+                            <p>ByteDance Seed</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Citation -->
+                <div class="section citation-section">
+                    <div class="container">
+                        <div class="section-header">
+                            <span class="section-tag" style="background: rgba(124, 58, 237, 0.1); color: #7c3aed;">Reference</span>
+                            <h2 class="section-title">Citation</h2>
+                        </div>
+                        <div class="citation-box">
+                            <pre><code>@article{qu2025seedproteo,
+  title={SeedProteo: Accurate De Novo All-Atom Design of Protein Binders},
+  author={Qu, Wei and Ma, Yiming and Ye, Fei and Lu, Chan and Zhou, Yi 
+          and Zhang, Kexin and Wang, Lan and Gui, Minrui and Gu, Quanquan},
+  journal={arXiv preprint},
+  year={2025}
+}</code></pre>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <!-- <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <img src="figures/seed_logo.png" alt="ByteDance Seed" class="footer-logo-image">
+                </div>
+                <p class="footer-copyright">© 2025 ByteDance Seed. All rights reserved.</p>
+            </div>
+        </div>
+    </footer> -->
+
+    <!-- WeChat QR Code Modal -->
+    <div id="wechat-modal" class="modal" onclick="closeWeChatModal(event)">
+        <div class="modal-content" onclick="event.stopPropagation()">
+            <button class="modal-close" onclick="closeWeChatModal()">&times;</button>
+            <h3 class="modal-title">Join Our WeChat Group</h3>
+            <p class="modal-desc">Scan the QR code to join the community</p>
+            <div class="qr-container">
+                <img id="wechat-qr" src="" alt="WeChat QR Code">
+            </div>
+            <p class="modal-note">Please add the admin WeChat first, then request to join the group</p>
+        </div>
+    </div>
+
+    <script src="script-combined-white.js"></script>
 </body>
 </html>
+
