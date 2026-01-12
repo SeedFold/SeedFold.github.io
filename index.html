@@ -165,69 +165,69 @@
                             <table class="results-table">
                                 <thead>
                                     <tr>
-                                        <th>Model</th>
-                                        <th>Monomer<br><span class="metric">(lDDT)</span></th>
-                                        <th>Prot-Prot<br><span class="metric">(SR%: DockQ ≥ 0.23)</span></th>
-                                        <th>Ab-Ag<br><span class="metric">(SR%: DockQ ≥ 0.23)</span></th>
-                                        <th>Prot-Lig<br><span class="metric">(SR%: lRMSD < 2Å and lDDT-PLI > 0.8)</span></th>
-                                        <th>Prot-RNA<br><span class="metric">(SR%: DockQ ≥ 0.23)</span></th>
-                                        <th>Prot-DNA<br><span class="metric">(SR%: DockQ ≥ 0.23)</span></th>
+                                        <th style="border-bottom: 2px solid rgba(0, 0, 0, 0.15);">Task</th>
+                                        <th class="model-name ours" style="background: rgba(37, 99, 235, 0.08); border-bottom: 2px solid rgba(0, 0, 0, 0.15);">SeedFold</th>
+                                        <th class="model-name ours" style="background: rgba(37, 99, 235, 0.08); border-bottom: 2px solid rgba(0, 0, 0, 0.15);">SeedFold-Linear</th>
+                                        <th style="border-bottom: 2px solid rgba(0, 0, 0, 0.15);">AlphaFold 3</th>
+                                        <th style="border-bottom: 2px solid rgba(0, 0, 0, 0.15);">Boltz-1</th>
+                                        <th style="border-bottom: 2px solid rgba(0, 0, 0, 0.15);">Chai-1</th>
+                                        <th style="border-bottom: 2px solid rgba(0, 0, 0, 0.15);">Protenix-0.5</th>
                                     </tr>
                                 </thead>
                                 <tbody>
                                     <tr>
-                                        <td class="model-name">AlphaFold 3</td>
+                                        <td class="model-name">Monomer<br><span class="metric" style="color: #94a3b8; font-size: 0.8em;">(lDDT)</span></td>
+                                        <td class="best" style="background: rgba(37, 99, 235, 0.08);">0.8889</td>
+                                        <td class="second" style="background: rgba(37, 99, 235, 0.08);">0.8861</td>
                                         <td>0.88</td>
-                                        <td>72.93%</td>
-                                        <td>47.90%</td>
-                                        <td>64.90%</td>
-                                        <td>62.32%</td>
-                                        <td class="best">79.18%</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="model-name">Boltz-1</td>
                                         <td>0.87</td>
-                                        <td>68.25%</td>
-                                        <td>33.54%</td>
-                                        <td>55.04%</td>
-                                        <td>56.90%</td>
-                                        <td>70.97%</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="model-name">Chai-1</td>
                                         <td>0.87</td>
-                                        <td>68.53%</td>
-                                        <td>23.64%</td>
-                                        <td>51.23%</td>
-                                        <td>50.91%</td>
-                                        <td>69.97%</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="model-name">Protenix-0.5</td>
                                         <td>0.8773</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="model-name">Protein-Protein<br><span class="metric" style="color: #94a3b8; font-size: 0.8em;">(SR%: DockQ ≥ 0.23)</span></td>
+                                        <td class="second" style="background: rgba(37, 99, 235, 0.08);">74.03%</td>
+                                        <td class="best" style="background: rgba(37, 99, 235, 0.08);">74.14%</td>
+                                        <td>72.93%</td>
+                                        <td>68.25%</td>
+                                        <td>68.53%</td>
                                         <td>71.50%</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="model-name">Ab-Ag<br><span class="metric" style="color: #94a3b8; font-size: 0.8em;">(SR%: DockQ ≥ 0.23)</span></td>
+                                        <td class="best" style="background: rgba(37, 99, 235, 0.08);">53.21%</td>
+                                        <td style="background: rgba(37, 99, 235, 0.08);">46.91%</td>
+                                        <td>47.90%</td>
+                                        <td>33.54%</td>
+                                        <td>23.64%</td>
                                         <td>41.00%</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="model-name">Protein-Ligand<br><span class="metric" style="color: #94a3b8; font-size: 0.8em;">(SR%: lRMSD < 2Å and lDDT-PLI > 0.8)</span></td>
+                                        <td style="background: rgba(37, 99, 235, 0.08);">63.12%</td>
+                                        <td class="best" style="background: rgba(37, 99, 235, 0.08);">66.48%</td>
+                                        <td>64.90%</td>
+                                        <td>55.04%</td>
+                                        <td>51.23%</td>
                                         <td>62.30%</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="model-name">Protein-RNA<br><span class="metric" style="color: #94a3b8; font-size: 0.8em;">(SR%: DockQ ≥ 0.23)</span></td>
+                                        <td class="best" style="background: rgba(37, 99, 235, 0.08);">65.31%</td>
+                                        <td style="background: rgba(37, 99, 235, 0.08);">61.80%</td>
+                                        <td>62.32%</td>
+                                        <td>56.90%</td>
+                                        <td>50.91%</td>
                                         <td>50.70%</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="model-name">Protein-DNA<br><span class="metric" style="color: #94a3b8; font-size: 0.8em;">(SR%: DockQ ≥ 0.23)</span></td>
+                                        <td style="background: rgba(37, 99, 235, 0.08);">72.60%</td>
+                                        <td class="second" style="background: rgba(37, 99, 235, 0.08);">76.00%</td>
+                                        <td class="best">79.18%</td>
+                                        <td>70.97%</td>
+                                        <td>69.97%</td>
                                         <td>71.38%</td>
-                                    </tr>
-                                    <tr class="highlight-row">
-                                        <td class="model-name ours">SeedFold</td>
-                                        <td class="best">0.8889</td>
-                                        <td class="second">74.03%</td>
-                                        <td class="best">53.21%</td>
-                                        <td class="second">63.12%</td>
-                                        <td class="best">65.31%</td>
-                                        <td>72.60%</td>
-                                    </tr>
-                                    <tr class="highlight-row">
-                                        <td class="model-name ours">SeedFold-Linear</td>
-                                        <td class="second">0.8861</td>
-                                        <td class="best">74.14%</td>
-                                        <td class="second">46.91%</td>
-                                        <td class="best">66.48%</td>
-                                        <td class="second">61.80%</td>
-                                        <td class="second">76.00%</td>
                                     </tr>
                                 </tbody>
                             </table>
