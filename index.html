@@ -21,8 +21,8 @@
                 <button class="tab-btn" data-project="seedproteo">SeedProteo</button>
             </div>
             <div class="nav-links">
-                <a href="https://seedfold.io/" class="nav-btn try-btn" target="_blank">
-                    <span>Web Server</span>
+                <a href="https://seedfold.io/" class="nav-btn try-btn nav-cta" target="_blank">
+                    <span>🚀 Web Server</span>
                 </a>
             </div>
         </div>
@@ -69,10 +69,15 @@
                         </div>
                         <div class="hero-actions">
                             <div class="hero-actions-main">
-                                <a href="#seedfold-results" class="btn btn-primary">View Results</a>
+                                <a href="#seedfold-results" class="btn btn-secondary">View Results</a>
                                 <a href="https://arxiv.org/abs/2512.24354" class="btn btn-secondary" target="_blank">Read Paper</a>
-                                <a href="https://seedfold.io/" class="btn btn-secondary" target="_blank">Try SeedFold</a>
-                                <a href="https://job.toutiao.com/s/xt7b-QX1bTc" class="btn btn-primary" target="_blank">Join Us!</a>
+                                <a href="https://seedfold.io/" class="btn btn-cta" target="_blank">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="20" height="20" style="margin-right: 8px;">
+                                        <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/>
+                                    </svg>
+                                    Try SeedFold Now
+                                </a>
+                                <a href="https://job.toutiao.com/s/xt7b-QX1bTc" class="btn btn-secondary" target="_blank">Join Us!</a>
                             </div>
                             <div class="hero-actions-social">
                                 <button class="btn-icon" onclick="openWeChatModal('seedfold')" title="Join WeChat Group">
@@ -432,10 +437,15 @@
                         </div>
                         <div class="hero-actions">
                             <div class="hero-actions-main">
-                                <a href="#seedproteo-results" class="btn btn-primary" style="background: #7c3aed;">View Results</a>
+                                <a href="#seedproteo-results" class="btn btn-secondary">View Results</a>
                                 <a href="https://arxiv.org/abs/2512.24192" class="btn btn-secondary" target="_blank">Read Paper</a>
-                                <a href="https://seedfold.io/" class="btn btn-secondary" target="_blank">Try SeedProteo</a>
-                                <a href="https://job.toutiao.com/s/xt7b-QX1bTc" class="btn btn-primary" style="background: #7c3aed;" target="_blank">Join Us!</a>
+                                <a href="https://seedfold.io/" class="btn btn-cta btn-cta-proteo" target="_blank">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="20" height="20" style="margin-right: 8px;">
+                                        <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/>
+                                    </svg>
+                                    Try SeedProteo Now
+                                </a>
+                                <a href="https://job.toutiao.com/s/xt7b-QX1bTc" class="btn btn-secondary" target="_blank">Join Us!</a>
                             </div>
                             <div class="hero-actions-social">
                                 <button class="btn-icon" onclick="openWeChatModal('seedproteo')" title="Join WeChat Group">
@@ -789,6 +799,140 @@
             <p class="modal-note">Please add the admin WeChat first, then request to join the group</p>
         </div>
     </div>
+
+    <!-- CTA Button Styles -->
+    <style>
+        .btn-cta {
+            position: relative;
+            background: linear-gradient(135deg, #2563eb 0%, #0891b2 100%) !important;
+            color: #ffffff !important;
+            font-weight: 700 !important;
+            font-size: 1.05rem !important;
+            padding: 14px 32px !important;
+            box-shadow: 0 4px 20px rgba(37, 99, 235, 0.4) !important;
+            border: 2px solid transparent !important;
+            animation: pulse-glow 2s ease-in-out infinite;
+            overflow: hidden;
+        }
+
+        .btn-cta::before {
+            content: '';
+            position: absolute;
+            top: -2px;
+            left: -2px;
+            right: -2px;
+            bottom: -2px;
+            background: linear-gradient(135deg, #60a5fa, #22d3ee, #60a5fa);
+            border-radius: 12px;
+            z-index: -1;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            animation: rotate-border 3s linear infinite;
+        }
+
+        .btn-cta:hover::before {
+            opacity: 1;
+        }
+
+        .btn-cta:hover {
+            transform: translateY(-3px) scale(1.05) !important;
+            box-shadow: 0 8px 30px rgba(37, 99, 235, 0.6) !important;
+        }
+
+        .btn-cta svg {
+            animation: lightning 1.5s ease-in-out infinite;
+        }
+
+        .btn-cta-proteo {
+            background: linear-gradient(135deg, #7c3aed 0%, #ec4899 100%) !important;
+            box-shadow: 0 4px 20px rgba(124, 58, 237, 0.4) !important;
+        }
+
+        .btn-cta-proteo:hover {
+            box-shadow: 0 8px 30px rgba(124, 58, 237, 0.6) !important;
+        }
+
+        .btn-cta-proteo::before {
+            background: linear-gradient(135deg, #a78bfa, #f472b6, #a78bfa);
+        }
+
+        @keyframes pulse-glow {
+            0%, 100% {
+                box-shadow: 0 4px 20px rgba(37, 99, 235, 0.4);
+            }
+            50% {
+                box-shadow: 0 4px 30px rgba(37, 99, 235, 0.7);
+            }
+        }
+
+        @keyframes rotate-border {
+            0% {
+                background-position: 0% 50%;
+            }
+            100% {
+                background-position: 200% 50%;
+            }
+        }
+
+        @keyframes lightning {
+            0%, 100% {
+                transform: translateY(0) rotate(0deg);
+            }
+            25% {
+                transform: translateY(-2px) rotate(-5deg);
+            }
+            75% {
+                transform: translateY(2px) rotate(5deg);
+            }
+        }
+
+        /* Navigation CTA Button */
+        .nav-cta {
+            background: linear-gradient(135deg, #2563eb 0%, #0891b2 100%) !important;
+            animation: nav-pulse 2s ease-in-out infinite;
+            position: relative;
+        }
+
+        .nav-cta::after {
+            content: '';
+            position: absolute;
+            top: -2px;
+            left: -2px;
+            right: -2px;
+            bottom: -2px;
+            border-radius: 10px;
+            background: linear-gradient(135deg, #60a5fa, #22d3ee);
+            z-index: -1;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .nav-cta:hover::after {
+            opacity: 0.7;
+        }
+
+        .nav-cta:hover {
+            transform: translateY(-1px) scale(1.03) !important;
+            box-shadow: 0 6px 20px rgba(37, 99, 235, 0.4) !important;
+        }
+
+        @keyframes nav-pulse {
+            0%, 100% {
+                box-shadow: 0 2px 8px rgba(37, 99, 235, 0.3);
+            }
+            50% {
+                box-shadow: 0 4px 16px rgba(37, 99, 235, 0.6);
+            }
+        }
+
+        /* Mobile responsiveness */
+        @media (max-width: 768px) {
+            .btn-cta {
+                font-size: 0.95rem !important;
+                padding: 12px 24px !important;
+            }
+        }
+    </style>
 
     <script src="script.js"></script>
 </body>
